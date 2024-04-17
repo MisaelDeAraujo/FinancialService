@@ -28,6 +28,8 @@ public class TransactionService {
     private UserRepository userRepository;
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private NotificationService notificationService;
 
     public TransactionDto saveTransaction(TransactionDto dto){
         Optional<User> findPayer = userRepository.findById(dto.payer());
@@ -51,10 +53,13 @@ public class TransactionService {
                 .payer(payer)
                 .payee(payee)
                 .transferredValue(dto.value())
-                .date(LocalDateTime.now())
+                .transferDate(LocalDateTime.now())
                 .build();
-
                 repository.save(transacion);
+
+                notificationService.sendNotification(payer, "Transferência efetuada");
+                notificationService.sendNotification(payee, "Transfêrencia recebida em sua conta");
+
                 return dto;
 
             }else{

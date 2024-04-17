@@ -39,6 +39,6 @@ public class Transaction {
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     private Double transferredValue;
     @Column
-    private LocalDateTime date;
+    private LocalDateTime transferDate;
 
 }
