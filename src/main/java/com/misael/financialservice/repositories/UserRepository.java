@@ -5,9 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.misael.financialservice.entities.User;
 
-/**
- * UserRepository
- */
 @Repository
 public interface UserRepository extends JpaRepository<User,Integer>{
 

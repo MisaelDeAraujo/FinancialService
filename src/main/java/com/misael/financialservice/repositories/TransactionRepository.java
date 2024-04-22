@@ -5,9 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.misael.financialservice.entities.Transaction;
 
-/**
- * Transaction
- */
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction,Integer>{
 

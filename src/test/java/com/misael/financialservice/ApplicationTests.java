@@ -2,9 +2,11 @@ package com.misael.financialservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-class FinancialserviceApplicationTests {
+@ActiveProfiles("test")
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
