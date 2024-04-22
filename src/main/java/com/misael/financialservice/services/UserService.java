@@ -12,9 +12,7 @@ import com.misael.financialservice.entities.dtos.UserRegistrationRequestDto;
 import com.misael.financialservice.entities.dtos.UserRegistrationResponseDto;
 import com.misael.financialservice.repositories.UserRepository;
 
-/**
- * UserService
- */
+
 @Service
 public class UserService {
 

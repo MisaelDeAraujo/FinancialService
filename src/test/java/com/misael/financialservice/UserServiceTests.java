@@ -16,9 +16,6 @@ import com.misael.financialservice.entities.dtos.UserRegistrationRequestDto;
 import com.misael.financialservice.repositories.UserRepository;
 import com.misael.financialservice.services.UserService;
 
-/**
- * UserServiceTests
- */
 @SpringBootTest
 @ActiveProfiles("test")
 public class UserServiceTests {

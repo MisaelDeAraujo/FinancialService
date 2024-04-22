@@ -10,9 +10,6 @@ import org.springframework.web.client.RestTemplate;
 import com.misael.financialservice.entities.User;
 import com.misael.financialservice.entities.dtos.NotificationDto;
 
-/**
- * NotificationService
- */
 @Service
 public class NotificationService {
 
@@ -35,8 +32,6 @@ public class NotificationService {
             throw new RuntimeException();
         }
 
-        
-        
     }
     
 }

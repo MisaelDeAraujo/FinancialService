@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-container-financialservice
+    environment:
+      POSTGRES_DB: financialservicedb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "5432:5432"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: financialservice
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
